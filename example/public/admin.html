@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="title" content="{{html.title}}">
+  <meta name="description" content="{{html.description}}">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <noscript>
+    <strong>{{unscriptable}}</strong>
+  </noscript>
+
+  <h1 id="appName">{{html.name}}</h1>
+  <ul>
+    {{each notes $value $i}}
+    <li>{{$i + 1}}.{{$value}}</li>
+    {{/each}}
+  </ul>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+</html>

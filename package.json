@@ -1,0 +1,32 @@
+{
+  "name": "art-template-webpack-plugin",
+  "version": "0.0.1",
+  "description": "A webpack plugin handler HTML with art-template.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonMr/art-template-webpack-plugin.git"
+  },
+  "keywords": [
+    "html-webpack-plugin",
+    "art-template-webpack-plugin",
+    "replace",
+    "webplack"
+  ],
+  "author": "jhonmrli@foxmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhonMr/art-template-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/JhonMr/art-template-webpack-plugin#readme",
+  "devDependencies": {
+    "art-template": "^4.13.2",
+    "html-webpack-plugin": "^5.3.2"
+  }
+}

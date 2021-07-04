@@ -1,5 +1,5 @@
 # art-template-webpack-plugin
-A webpack plugin handler HTML with art-template. Help for Insert data and create multi-language HTML.
+A webpack plugin handle HTML with art-template. Help for insert data and create multi-language HTML.
 
 #### Installation
 
@@ -10,8 +10,8 @@ npm i --save-dev art-template-webpack-plugin
 ```
 // vue.config.js
 const tempPlugin = require('art-template-webpack-plugin');
-const cnObject = {"title": "测试应用", "description": "这是一款用于测试art-template-webpack-plugin的应用"};
-const enObject = {"title": "Test application","description": "This is a test Application for art-template-webpack-plugin"};
+const cnObject = {"title": "测试应用", "description": "这是一款用于测试art-template-webpack-plugin的应用", "notes": ["插入数据", "生成多语言HTML"]};
+const enObject = {"title": "Test application","description": "This is a test Application for art-template-webpack-plugin", "notes": ["Insert data", "careat multi-language HTML"]};
 module.exports = {
   pages: {
     index: {
@@ -57,12 +57,17 @@ module.exports = {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="title" content="**{{title}}**">
-    <meta name="description" content="**{{description}}**">
+    <meta name="title" content="{{title}}">
+    <meta name="description" content="{{description}}">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <ul>
+        {{each notes $item $i}}
+        <li>{{$i}}.{{$item}}</li>
+        {{/each}}
+    </ul>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

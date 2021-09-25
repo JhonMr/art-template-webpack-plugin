@@ -5,6 +5,7 @@ module.exports =  {
     "adminName": "Test BGAPP ",
     "title": "application",
     "description": "This is a test Application for art-template-webpack-plugin",
+    "footer_power_explain": "Power By JHL",
   },
   "notes": [
       "Be careful you password",

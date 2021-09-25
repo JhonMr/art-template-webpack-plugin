@@ -1,7 +1,7 @@
 {
   "name": "art-template-webpack-plugin",
-  "version": "0.0.2",
-  "description": "A webpack plugin handler HTML with art-template.",
+  "version": "1.0.0",
+  "description": "A webpack plugin handle HTML with art-template.",
   "main": "index.js",
   "directories": {
     "example": "example"

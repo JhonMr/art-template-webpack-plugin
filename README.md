@@ -30,16 +30,15 @@ module.exports = {
       new ArtTemplatePlugin(
         [
           {
-            filename: 'index.html',
-            create: true,                   // create file
+            template: 'public/index.html',
             fileDataMap: {
               _default: cnObject,           // ‘_default’ for handle index.html width cnObject
               "en.html": enObject,           // create a ‘en.html’ base on ‘index.html’ and handle with enObject
             }
           },
           {
-            filename: 'admin.html',
-            fileDataMap: cnObject           // Handle admin.html width cnObject
+            template: 'public/admin.html',
+            fileData: cnObject           // Handle admin.html width cnObject
           }
         ]
       )
@@ -70,6 +69,7 @@ module.exports = {
     </ul>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    {{include '../src/layout/footer.html'}}
   </body>
 </html>
 ```

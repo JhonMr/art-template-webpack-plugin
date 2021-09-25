@@ -22,16 +22,15 @@ module.exports = {
       new ArtTemplatePlugin(
         [
           {
-            filename: 'index.html',
-            create: true,
+            template: 'public/index.html',
             fileDataMap: {
               _default: cnlang,
               "en.html": enlang,
             }
           },
           {
-            filename: 'admin.html',
-            fileDataMap: cnlang
+            template: 'public/admin.html',
+            fileData: cnlang
           }
         ]
       )
